@@ -24,7 +24,7 @@ _Reminder: you can use the internet to help you answer these questions :)_
 
 - In a terminal, what does control-c do?
 
-  A: `control-c` stops the current process.
+  A: `control-c` (`^c`) stops the current process.
 
 - What would be the result of typing the following commands?
  
