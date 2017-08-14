@@ -90,7 +90,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
         flex: 1;
     }
 
-    .foodSectionItemLeft {
+    .foodSectionItem {
         display: flex;
         direction: row;
         order: 1
@@ -115,31 +115,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
 
     
     }
-    .foodSectionItemCenter {
-        display: flex;
-        direction: row;
-        order: 2
-        justify-content: center;
-        padding: 5px;
-        width: 140px;
-        height: 50px;
-        border-top-left-radius: 10%;
-        border-top-right-radius: 10%;
-        border-bottom-right-radius:  10%;
-        border-bottom-left-radius:  10%;
-        /*margin: 10px;*/
-        margin-top: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        line-height: 50px;
-        background: tomato;
-        color: white;
-        font-weight: bold;
-        font-size: 24px;
 
-    
-    }
 /*MAIN SECTION*/
 .mainGrocerySection {
     display: flex;
@@ -158,7 +134,6 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     flex-direction: column;
     flex-grow: 6;
     /*flex: 6;*/
-
     width: 95%;
     padding: 5px;
     /*align-items: start;*/
@@ -171,11 +146,55 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
 
    /*flex: 2;*/
 }
+.bookTitleItem {     
+    border: 1px solid orange !important; /*TURN OFF BEFORE DEPLOYING*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    order: 1;
+    align-content: center;
+    padding: 5px;
+    width: 140px;
+    height: 50px;
+    /*margin: 10px;*/
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height: 50px;
+    background: tomato;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+   /*flex: 2;*/
+}
+.authorNameItem {     
+    border: 1px solid purple !important; /*TURN OFF BEFORE DEPLOYING*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    order: 2;
+    align-content: center;
+    padding: 5px;
+    width: 140px;
+    height: 50px;
+    /*margin: 10px;*/
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height: 50px;
+    background: tomato;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+   /*flex: 2;*/
+}
 .playButton {
     display: flex;
     direction: row;
-    order: 3;
     justify-content: center;
+    order: 3;
     align-content: center;
     padding: 5px;
     width: 140px;
