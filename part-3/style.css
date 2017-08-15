@@ -31,7 +31,7 @@ body {
     border-top-right-radius: 30%;
     border-bottom-right-radius:  30%;
     border-bottom-left-radius:  30%;
-    box-shadow: 20%;
+    box-shadow: 30%;
     /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
@@ -67,7 +67,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     justify-content: flex-start;
 }
 /*SIDEBAR SECTION*/
-    .sidebarFoodSection {
+    .bookShelvesSection {
         display: flex;
         flex-direction: column;
         order: 2;
@@ -79,18 +79,18 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
         background-color: #dbd6d6;
         
     }
-    #foodSection {    /* should only use 'id' once for a specific thing */
+    #bookShelves {    /* should only use 'id' once for a specific thing */
         font-family: Georgia, serif;
         color: darkred;
         background-color: #dbd6d6;
     }
-    .foodSectionList {
+    .bookShelvesList {
         display: flex;
         flex-direction: column;
         flex: 1;
     }
 
-    .foodSectionItem {
+    .bookShelvesItem {
         display: flex;
         direction: row;
         order: 1
@@ -98,10 +98,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
         padding: 5px;
         width: 140px;
         height: 50px;
-        border-top-left-radius: 10%;
-        border-top-right-radius: 10%;
-        border-bottom-right-radius:  10%;
-        border-bottom-left-radius:  10%;
+        
         /*margin: 10px;*/
         margin-top: 10px;
         margin-right: 10px;
@@ -112,7 +109,10 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
         color: white;
         font-weight: bold;
         font-size: 24px;
-
+/*
+        align-content: center;
+        align-items: center;
+*/
     
     }
 
@@ -128,7 +128,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     background-color: #dbd6aa;
 }
 
-.grocerySectionList {
+.bookSectionList {
     border: 1px solid red !important;  /*TURN OFF BEFORE DEPLOYING*/
     display: flex;
     flex-direction: column;
@@ -138,7 +138,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     padding: 5px;
     /*align-items: start;*/
 }
-.grocerySectionRowItem {     
+.bookRowItem {     
     border: 1px solid yellow !important; /*TURN OFF BEFORE DEPLOYING*/
     display: flex;
     flex-direction: row;
@@ -190,7 +190,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     font-size: 24px;
    /*flex: 2;*/
 }
-.playButton {
+.buyButton {
     display: flex;
     direction: row;
     justify-content: center;
