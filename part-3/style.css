@@ -23,7 +23,7 @@ body {
   border-style: solid;
   padding: 5px 2px;
     justify-content: center;
-    align-content: center;
+    alignItem: center;
     padding: 5px;
     width: 140px;
     height: 50px;
@@ -59,11 +59,13 @@ body {
 }
 /* OVER-RIDES */
 ul {padding: 0; }   /* over-rides web-kit default padding */
+li {padding: 0; }   /* over-rides web-kit default padding */
+
 
 
 .columnHeader {
     display: flex;
-    align-content: flex-start;
+    alignItem: flex-start;
     justify-content: flex-start;
 }
 /*SIDEBAR SECTION*/
@@ -110,14 +112,14 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
         font-weight: bold;
         font-size: 24px;
 /*
-        align-content: center;
+        alignItem: center;
         align-items: center;
 */
     
     }
 
 /*MAIN SECTION*/
-.mainGrocerySection {
+.mainBookSection {
     display: flex;
     flex-direction: column; /* set to rows because each child is a 3-item row */
     order: 1;
@@ -144,15 +146,21 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     flex-direction: row;
     justify-content: space-around;
 
+
    /*flex: 2;*/
 }
 .bookTitleItem {     
     border: 1px solid orange !important; /*TURN OFF BEFORE DEPLOYING*/
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    /*
     justify-content: space-around;
     order: 1;
-    align-content: center;
+*/
+    alignItems: flex-start;
     padding: 5px;
     width: 140px;
     height: 50px;
@@ -162,6 +170,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
+    text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
@@ -169,12 +178,17 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
    /*flex: 2;*/
 }
 .authorNameItem {     
-    border: 1px solid purple !important; /*TURN OFF BEFORE DEPLOYING*/
+    border: 3px solid purple !important; /*TURN OFF BEFORE DEPLOYING*/
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+/*
     justify-content: space-around;
     order: 2;
-    align-content: center;
+*/
+    alignItems: center;
     padding: 5px;
     width: 140px;
     height: 50px;
@@ -184,6 +198,7 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
+    text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
@@ -194,11 +209,11 @@ ul {padding: 0; }   /* over-rides web-kit default padding */
     display: flex;
     direction: row;
     justify-content: center;
-    order: 3;
     align-content: center;
-    padding: 5px;
-    width: 140px;
-    height: 50px;
+    vertical-align: middle;
+    padding: 2px;
+    width: 70px;
+    height: 70px;
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
     border-bottom-right-radius:  30%;
