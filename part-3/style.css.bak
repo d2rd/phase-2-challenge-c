@@ -66,72 +66,73 @@ li {padding: 0; }   /* over-rides web-kit default padding */
     justify-content: flex-start;
 }
 /*SIDEBAR SECTION*/
-.bookShelvesSection {
-    display: flex;
-    flex-direction: column;
-    order: 2;
-    flex: 1;
-    border: 1.5px #888f91;
-    border-style: solid;
-    align-items: center;
-    justify-content: center;
-    background-color: #dbd6d6;
+    .bookShelvesSection {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        flex: 1;
+        border: 1.5px #888f91;
+        border-style: solid;
+        align-items: center;
+        justify-content: center;
+        background-color: #dbd6d6;
+        
+    }
+    #bookShelves {    /* should only use 'id' once for a specific thing */
+        font-family: Georgia, serif;
+        color: darkred;
+        background-color: #dbd6d6;
+    }
+    .bookShelvesList {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
 
-}
-#bookShelves {    /* should only use 'id' once for a specific thing */
-    font-family: Georgia, serif;
-    color: darkred;
-    background-color: #dbd6d6;
-}
-.bookShelvesList {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: flex-start;
-    align-content: center;
-    vertical-align: middle;
-    alignItems: flex-start;
-  
-}
+    .bookShelvesItem {
+        display: flex;
+        direction: row;
+        justify-content: center;
+        align-content: center;
+        vertical-align: middle;
 
-.bookShelvesItem {
-    display: flex;
-    direction: row;
+        padding: 5px;
+        width: 140px;
+        height: 50px;
+        
+        /*margin: 10px;*/
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        line-height: 50px;
+        background: tomato;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
 /*
-    justify-content: center;
-    align-content: center;
-    vertical-align: middle;
-    alignItems: flex-start;
+        alignItem: center;
+        align-items: center;
 */
     
-    padding: 5px;
-    width: 140px;
-    height: 50px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    line-height: 50px;
-
-    background: tomato;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;    
-}
-
+    }
 .backToTop{
     display: flex;
     direction: row;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+
     padding: 5px;
     width: 140px;
     height: 50px;
+
+    /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
-    
-    text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
@@ -147,8 +148,6 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    
-    text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
@@ -175,13 +174,18 @@ a:hover {
     display: flex;
     flex-direction: column;
     flex-grow: 6;
+    /*flex: 6;*/
     width: 95%;
     padding: 5px;
+    /*align-items: start;*/
 }
 .bookRowItem {     
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+
+   /*flex: 2;*/
 }
 .bookTitleItem {     
     display: flex;
@@ -189,22 +193,26 @@ a:hover {
     justify-content: center;
     align-content: center;
     vertical-align: middle;
+    /*
+    justify-content: space-around;
+    order: 1;
+*/
     alignItems: flex-start;
-    
     padding: 5px;
     width: 140px;
     height: 50px;
+    /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
-    
     text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
     font-size: 24px;
+   /*flex: 2;*/
 }
 .authorNameItem {     
     display: flex;
@@ -212,22 +220,26 @@ a:hover {
     justify-content: center;
     align-content: center;
     vertical-align: middle;
+/*
+    justify-content: space-around;
+    order: 2;
+*/
     alignItems: center;
-
     padding: 5px;
     width: 140px;
     height: 50px;
+    /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
-
     text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
     font-size: 24px;
+   /*flex: 2;*/
 }
 .buyButton {
     display: flex;
@@ -235,7 +247,6 @@ a:hover {
     justify-content: center;
     align-content: center;
     vertical-align: middle;
-    
     padding: 2px;
     width: 70px;
     height: 70px;
@@ -244,12 +255,12 @@ a:hover {
     border-bottom-right-radius:  30%;
     border-bottom-left-radius:  30%;
     box-shadow: 20%;
+    /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
-
     background: tomato;
     color: white;
     font-weight: bold;
@@ -273,19 +284,21 @@ a:hover {
 
 }
 
+
+
 #groceryList {
     font-family: Georgia, serif;
     color: darkred;
     background-color: #c0dbe2;
 }
 
-#btnAddToCart {
+/*#btnAddToCart {
     display: flex;
     flex-direction: column;
-    order: 1;
+    order: 1
     font-family: Georgia, serif;
-    font-size: 24px;
-    border-radius: 50px;
+  font-size: 24px;
+  /*border-radius: 50px;*/
     width: 60px;
     height: 40px;
     margin-top: 10px;
@@ -299,7 +312,7 @@ a:hover {
     text-align: center;
     text-decoration: none;
   
-}
+}*/
 
 /*Utility Classes*/
 .utilBorderRed {
