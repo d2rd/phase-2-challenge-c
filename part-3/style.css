@@ -17,21 +17,19 @@ body {
 }
 
 #btnCart {
-  display: flex;
-  font-size: 24px;
-  border: 1.5px white;
-  border-style: solid;
-  padding: 5px 2px;
+    display: flex;
+    direction: row;
     justify-content: center;
-    alignItem: center;
-    padding: 5px;
+    align-content: center;
+    vertical-align: middle;
+    padding: 2px;
     width: 140px;
-    height: 50px;
+    height: 70px;
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
     border-bottom-right-radius:  30%;
     border-bottom-left-radius:  30%;
-    box-shadow: 30%;
+    box-shadow: 20%;
     /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
@@ -41,8 +39,7 @@ body {
     background: tomato;
     color: white;
     font-weight: bold;
-    font-size: 24px; 
-  
+    font-size: 24px;
 }
 
 /* main section classes */
@@ -98,7 +95,7 @@ li {padding: 0; }   /* over-rides web-kit default padding */
         justify-content: center;
         align-content: center;
         vertical-align: middle;
-        justify-content: center;
+
         padding: 5px;
         width: 140px;
         height: 50px;
