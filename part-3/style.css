@@ -33,14 +33,11 @@ body {
     vertical-align: middle;
     
     padding: 2px;
-    width: 180px;
+    width: 140px;
     height: 70px;
     border-radius: 10%;
     box-shadow: 30%;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin: 10px;
     line-height: 50px;
     
     text-align: left;
@@ -58,8 +55,8 @@ body {
     border-radius: 50%;
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
 
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     padding: 2px;
 
     background: tomato;
@@ -67,7 +64,7 @@ body {
     color: #fff;
     text-align: center;
 
-    font: 18px Arial, sans-serif;
+    font: 13px Arial, sans-serif;
 /*    https://stackoverflow.com/questions/4861224/how-to-use-css-to-surround-a-number-with-a-circle*/
 }
 
@@ -105,13 +102,12 @@ li {padding: 0; }   /* over-rides web-kit default padding */
     border-style: solid;
     align-items: center;
     justify-content: center;
-    background-color: #dbd6d6;
-
+    background-color: #dbd6bf; /*#dbd6aa*/
 }
 #bookShelves {    /* should only use 'id' once for a specific thing */
     font-family: Georgia, serif;
     color: darkred;
-    background-color: #dbd6d6;
+    background-color: #dbd6bf; /*#dbd6aa*/
 }
 .bookShelvesList {
     display: flex;

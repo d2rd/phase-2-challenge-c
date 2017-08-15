@@ -8,38 +8,64 @@ body {
 .sectionHeader {
     display: flex;
     flex-direction: row;
-    align-item: start;
+    align-items: flex-start;
     vertical-align: middle;
-    text-align: center;
+    text-align: left;
+    justify-content: space-between; 
+}
+.headerTitle{
+    display: flex;
+    flex-direction: row;
+/*
+    align-item: flex-start;
+    vertical-align: middle;
+    text-align: left;
     justify-content: space-around;
-    font-size: 28px;
- 
+    font-size: 28px;    
+*/
 }
 
 #btnCart {
     display: flex;
     direction: row;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-start;
+    align-content: space-between;
     vertical-align: middle;
+    
     padding: 2px;
     width: 140px;
     height: 70px;
-    border-top-left-radius: 30%;
-    border-top-right-radius: 30%;
-    border-bottom-right-radius:  30%;
-    border-bottom-left-radius:  30%;
-    box-shadow: 20%;
-    /*margin: 10px;*/
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    border-radius: 10%;
+    box-shadow: 30%;
+    margin: 10px;
     line-height: 50px;
+    
+    text-align: left;
     background: tomato;
     color: white;
     font-weight: bold;
     font-size: 24px;
+}
+.numberCircle {
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-content: space-between;
+    vertical-align: baseline;
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+
+    background: tomato;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+
+    font: 13px Arial, sans-serif;
+/*    https://stackoverflow.com/questions/4861224/how-to-use-css-to-surround-a-number-with-a-circle*/
 }
 
 /* main section classes */
@@ -64,75 +90,74 @@ li {padding: 0; }   /* over-rides web-kit default padding */
     display: flex;
     alignItem: flex-start;
     justify-content: flex-start;
+    
 }
 /*SIDEBAR SECTION*/
-    .bookShelvesSection {
-        display: flex;
-        flex-direction: column;
-        order: 2;
-        flex: 1;
-        border: 1.5px #888f91;
-        border-style: solid;
-        align-items: center;
-        justify-content: center;
-        background-color: #dbd6d6;
-        
-    }
-    #bookShelves {    /* should only use 'id' once for a specific thing */
-        font-family: Georgia, serif;
-        color: darkred;
-        background-color: #dbd6d6;
-    }
-    .bookShelvesList {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
+.bookShelvesSection {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    flex: 1;
+    border: 1.5px #888f91;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbd6bf; /*#dbd6aa*/
+}
+#bookShelves {    /* should only use 'id' once for a specific thing */
+    font-family: Georgia, serif;
+    color: darkred;
+    background-color: #dbd6bf; /*#dbd6aa*/
+}
+.bookShelvesList {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-start;
+    align-content: center;
+    vertical-align: middle;
+    alignItems: flex-start;
+  
+}
 
-    .bookShelvesItem {
-        display: flex;
-        direction: row;
-        justify-content: center;
-        align-content: center;
-        vertical-align: middle;
-
-        padding: 5px;
-        width: 140px;
-        height: 50px;
-        
-        /*margin: 10px;*/
-        margin-top: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        line-height: 50px;
-        background: tomato;
-        color: white;
-        font-weight: bold;
-        font-size: 24px;
-/*
-        alignItem: center;
-        align-items: center;
-*/
-    
-    }
-.backToTop{
+.bookShelvesItem {
     display: flex;
     direction: row;
+/*
     justify-content: center;
     align-content: center;
     vertical-align: middle;
-
+    alignItems: flex-start;
+*/
+    
     padding: 5px;
     width: 140px;
     height: 50px;
-
-    /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
+
+    background: tomato;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;    
+}
+
+.backToTop{
+    display: flex;
+    direction: row;
+    padding: 5px;
+    width: 140px;
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height: 50px;
+    
+    text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
@@ -148,6 +173,8 @@ a {
     display: block;
     width: 100%;
     height: 100%;
+    
+    text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
@@ -169,23 +196,37 @@ a:hover {
     align-items: center; /* controls vertical positioning of row */
     background-color: #dbd6aa;
 }
+.mainBookHeader {
+    display: flex;
+    margin-right: auto;
+/*    alignItem: flex-start;*/
+    justify-content: flex-start;
+    
+    font-size: 28px; 
+    align-item: flex-start;
 
+    /*    vertical-align: middle;
+    text-align: left;
+    justify-content: space-around;
+   
+*/
+/*
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    alignItems: flex-start;
+*/}
 .bookSectionList {
     display: flex;
     flex-direction: column;
     flex-grow: 6;
-    /*flex: 6;*/
     width: 95%;
     padding: 5px;
-    /*align-items: start;*/
 }
 .bookRowItem {     
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
-
-   /*flex: 2;*/
 }
 .bookTitleItem {     
     display: flex;
@@ -193,26 +234,22 @@ a:hover {
     justify-content: center;
     align-content: center;
     vertical-align: middle;
-    /*
-    justify-content: space-around;
-    order: 1;
-*/
     alignItems: flex-start;
+    
     padding: 5px;
     width: 140px;
     height: 50px;
-    /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
+    
     text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
     font-size: 24px;
-   /*flex: 2;*/
 }
 .authorNameItem {     
     display: flex;
@@ -220,26 +257,22 @@ a:hover {
     justify-content: center;
     align-content: center;
     vertical-align: middle;
-/*
-    justify-content: space-around;
-    order: 2;
-*/
     alignItems: center;
+
     padding: 5px;
     width: 140px;
     height: 50px;
-    /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
+
     text-align: center;
     background: tomato;
     color: white;
     font-weight: bold;
     font-size: 24px;
-   /*flex: 2;*/
 }
 .buyButton {
     display: flex;
@@ -247,6 +280,7 @@ a:hover {
     justify-content: center;
     align-content: center;
     vertical-align: middle;
+    
     padding: 2px;
     width: 70px;
     height: 70px;
@@ -255,12 +289,12 @@ a:hover {
     border-bottom-right-radius:  30%;
     border-bottom-left-radius:  30%;
     box-shadow: 20%;
-    /*margin: 10px;*/
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     line-height: 50px;
+
     background: tomato;
     color: white;
     font-weight: bold;
@@ -284,21 +318,19 @@ a:hover {
 
 }
 
-
-
 #groceryList {
     font-family: Georgia, serif;
     color: darkred;
     background-color: #c0dbe2;
 }
 
-/*#btnAddToCart {
+#btnAddToCart {
     display: flex;
     flex-direction: column;
-    order: 1
+    order: 1;
     font-family: Georgia, serif;
-  font-size: 24px;
-  /*border-radius: 50px;*/
+    font-size: 24px;
+    border-radius: 50px;
     width: 60px;
     height: 40px;
     margin-top: 10px;
@@ -312,7 +344,7 @@ a:hover {
     text-align: center;
     text-decoration: none;
   
-}*/
+}
 
 /*Utility Classes*/
 .utilBorderRed {
