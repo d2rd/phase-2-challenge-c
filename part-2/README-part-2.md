@@ -7,7 +7,7 @@ Use the [`cars.json` file provided](https://gist.github.com/lg-bot/3014e0b8badc8
 Then write two scripts that can be run using the `node` command.
 
 1. `searchInYears.js` takes one argument (let's call it `yearRange`), finds all the cars from `cars.json` which have a `year` that is within the `yearRange`, and prints the `id`, `make`, `model`, and `year` of each matching car. The year range format should follow the format `YYYY-YYYY`, e.g. `1995-2001`.
-1. `searchByModel.js` takes one argument (let's call it the `model`), finds all the cars from `cars.json` who have a `model` value that _exactly matches_ the `model` argument, and prints the `id`, `model`, `year`, `last_owner`, and `date_purchased` of each matching car.
+2. `searchByModel.js` takes one argument (let's call it the `model`), finds all the cars from `cars.json` who have a `model` value that _exactly matches_ the `model` argument, and prints the `id`, `model`, `year`, `last_owner`, and `date_purchased` of each matching car.
 
 Your searches should not be case-sensitive: i.e. a search for "sorento" is the same as a search for "Sorento".
 
