@@ -1,54 +1,65 @@
-// 1 prints the car  
+// 1. prints the car  
 //   `id`, 
 //   `make`, 
 //   `model`,
 //   `year` 
-// 2 all cars with a year inside the year range provided in the script argument. 
-// 3 The range is _inclusive_—i.e. include cars with the same year as the start year or the end year of the range, as well as all years in between.
+// 2. all cars with a year inside the year range provided in the script argument. 
+// 3. The range is _inclusive_—i.e. include cars with the same year as the start year or the end year of the range, as well as all years in between.
 
-//SEARCH BY CITY
-// searchByCity.js takes one string argument (let's call it the city), finds all the clients from clients.json who have a city that exactly matches the city, and prints the id, rep_name, city, city, and state of each matching client.
 
-// Your searches should not be case-sensitive: i.e. a search for "Boston" is the same as a search for "boston".
-
-//Pseudo.
 // 1. Get required resources
-var fs = require('fs'); //requires the node 'fs' library.
-var clientData = require('./clients')
-var targetCity = process.argv[2] //search parameter is the 3rd array item.
-console.log(targetCity);
+    var fs = require('fs'); //requires the node 'fs' library.
+    var carData = require('./cars');
+    var targetYears = process.argv[2]; //search parameter is the 3rd array item.
+// console.log(targetYears + " in targetYears");
 
-// 2. load the clients.json file into the var 'clientData' (using absolute path).
-// const clientData = JSON.parse(fs.readFileSync('./clients.json', 'utf8')); //
+// 2. load the cars.json file into the var 'carData' (using absolute path).
+    const carArray = JSON.parse(fs.readFileSync('./cars.json', 'utf8')); //using JSON.parse to convert JSON string into JSON object (review chat with Bonnie)
 
-function byCity(clientObj, index, clientData) { 
-    // console.log(clientObj);   
-  if (clientObj.city == targetCity) {
-        return true;
+// 3. Declare helper function 'inYears' to match search parameter 'targetYears' to array values.
+// Attribution:  https://www.youtube.com/watch?v=q_MXH_Ponpg
+    function inYears(carObj, index, carData) { 
+        // console.log(carObj + " in carObj");
+//SPLIT var 'targetYears' into array 'targetYearsArray'
+    targetYearsArray = targetYears.split("-");
+
+     
+      if (carObj.year >= targetYearsArray[0] && carObj.year <= targetYearsArray[1]) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
-    else {
-         return false;
-     }}
 
-var clientsFound = clientData.filter(byCity);
-// console.log(JSON.parse(clientsFound,));
-// console.log(clientsFound); // print all the values of clientsFound
 
-for (i in clientsFound){
-    console.log(i);
-    for (key in clientsFound[i]){
-      if(key !== 'company' && key !== 'no_employees' && key !== 'phone' && key !== 'created_at') { // filters out unwanted keys.  NOTE: Must use '&&'!  '||' ("OR" operator) does not work in JS 'if'.  This is NOT SQL.
-      //Prints the id, rep_name, city, and state of each matching client.
-        console.log( key + ": " + clientsFound[i][key]);
-      }
+var carsFound = carArray.filter(inYears); // NOTE: inYears IS the callback.  runs filter method against new array 'carsFound' containing matches output by 'inYears' helper function.
+// console.log(JSON.parse(carsFound));  // converts JSON string to object.
+// console.log(carsFound + " in carsFound"); // print all the values of carsFound
+
+console.log("Finding cars from " + targetYearsArray[0] + " to " + targetYearsArray[1] + " inclusive.");
+for (i in carsFound){
+    // console.log(i + " in 'i'");
+    for (key in carsFound[i]){
+     var badKeys = [
+      `vin`,
+      `last_owner`,
+      `date_purchased`
+    ]
+    if (badKeys.indexOf(key) == -1){
+        console.log( key + ": " + carsFound[i][key]);
     }
+    }        
 }
+// Include these values of each matching car:
+//     `id`,
+//     `make`,
+//     `model`,
+//     `year`
 
-// Return these values
-        // clientsFound.id
-        // clientsFound.rep_name
-        // clientsFound.city
-        // clientsFound.city
-        // clientsFound.state
-
+// 
         
+// Exclude these values on these keys by adding to 'badKeys' array:
+//     `vin`
+//     `last_owner`,
+//     `date_purchased`
